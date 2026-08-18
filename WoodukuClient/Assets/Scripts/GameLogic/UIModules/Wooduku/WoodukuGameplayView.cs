@@ -10,7 +10,7 @@ namespace GameLogic.Wooduku
 {
     /// <summary>
     /// 局内玩法常驻根（不走 UIPanel / OpenPanel）。
-    /// 由 GameSceneBootstrap 挂载；进关隐藏主菜单，返回再显示。
+    /// 与主菜单平级：同挂 Panel 层底衬，进关/返回仅显隐切换；后续 OpenPanel 盖在二者之上。
     /// </summary>
     public sealed class WoodukuGameplayView : MonoBehaviour
     {
@@ -18,7 +18,8 @@ namespace GameLogic.Wooduku
         private const string CatSpritePath = "Assets/GameRes/ImageAtlas/GamePlay/wooduku_mark_cat.png";
         private const string ExcludeSpritePath = "Assets/GameRes/ImageAtlas/GamePlay/wooduku_mark_x.png";
         private const float ExcludeAppearSeconds = 0.18f;
-        private const int SortingOrder = 60;
+        // 与主菜单平级、同为 Panel 层底衬；后续 OpenPanel 须盖在其上（勿抬高）。
+        private const int SortingOrder = -1;
 
         public static WoodukuGameplayView Instance { get; private set; }
 

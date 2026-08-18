@@ -2,7 +2,7 @@ using FishFramework;
 using UnityEngine;
 
 /// <summary>
-/// 全局 GM 热键：F1 打开 GMLevelChooseUI（对齐参考工程）。
+/// 全局 GM 热键：F1 打开 GMLevelChooseUI（PanelLayer.GM）。
 /// Editor 始终可用；真机需 GameSettings.gmMode = true。
 /// </summary>
 public sealed class GmHotkey : MonoBehaviour
@@ -46,9 +46,10 @@ public sealed class GmHotkey : MonoBehaviour
             return;
         }
 
-        // 与参考工程一致：走默认 Panel 层 OpenPanel<T>()（内部会 Open）
-        Debug.Log("[GM] OpenPanel<GMLevelChooseUI> (F1)");
-        GameModule.UI.OpenPanel<GMLevelChooseUI>();
+        // 主菜单/玩法为 Panel 层底衬；GM 走专用层，在二者之上
+        Debug.Log("[GM] OpenPanel<GMLevelChooseUI> @ PanelLayer.GM (F1)");
+        var panel = GameModule.UI.OpenPanel<GMLevelChooseUI>(PanelLayer.GM, PanelOpenType.Single);
+        panel.Open();
     }
 
     private static bool CanOpenGm()

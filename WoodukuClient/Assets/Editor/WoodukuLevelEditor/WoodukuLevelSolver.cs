@@ -304,7 +304,7 @@ namespace Wooduku.LevelEditor
             }
         }
 
-        /// <summary>与已放置猫八邻接触则非法。</summary>
+        /// <summary>与已放置猴八邻接触则非法。</summary>
         private static bool TouchesPrevious(int row, int col, int[] placeCol)
         {
             for (var r = 0; r < row; r++)

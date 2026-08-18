@@ -30,22 +30,22 @@ MonoBehaviour:
     enabled: 1
   - name: "\u827210"
     color: {r: 0.8, g: 0.5019608, b: 0.29803923, a: 1}
-    enabled: 1
+    enabled: 0
   - name: "\u82726"
     color: {r: 0.4, g: 0.6, b: 0.8, a: 1}
-    enabled: 1
+    enabled: 0
   - name: "\u82727"
     color: {r: 0.69803923, g: 0.69803923, b: 0.4509804, a: 1}
-    enabled: 1
+    enabled: 0
   - name: "\u82728"
     color: {r: 0.5019608, g: 0.5019608, b: 0.5019608, a: 1}
-    enabled: 1
+    enabled: 0
   - name: "\u82729"
     color: {r: 0.34901962, g: 0.54901963, b: 0.54901963, a: 1}
-    enabled: 1
+    enabled: 0
   - name: "\u827210"
     color: {r: 0.8, g: 0.5019608, b: 0.29803923, a: 1}
-    enabled: 1
+    enabled: 0
   - name: "\u827211"
     color: {r: 0.54901963, g: 0.34901962, b: 0.54901963, a: 1}
-    enabled: 1
+    enabled: 0

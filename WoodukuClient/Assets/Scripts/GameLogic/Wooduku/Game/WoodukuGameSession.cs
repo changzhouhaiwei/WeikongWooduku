@@ -191,7 +191,7 @@ namespace GameLogic.Wooduku
         }
 
         /// <summary>
-        /// 滑动涂抹：clearExclude=false 时 None→Exclude；true 时 Exclude→None。不碰猫。
+        /// 滑动涂抹：clearExclude=false 时 None→Exclude；true 时 Exclude→None。不碰猴。
         /// </summary>
         public bool SwipePaint(int r, int c, bool clearExclude)
         {

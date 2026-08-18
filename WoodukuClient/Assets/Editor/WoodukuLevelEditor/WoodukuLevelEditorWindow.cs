@@ -565,7 +565,7 @@ namespace Wooduku.LevelEditor
         {
             EditorGUILayout.LabelField("棋盘标定", EditorStyles.boldLabel);
             _cellPx = EditorGUILayout.Slider("格子大小", _cellPx, 22f, 56f);
-            _showSolutionOnBoard = EditorGUILayout.Toggle("显示检测到的解（猫）", _showSolutionOnBoard);
+            _showSolutionOnBoard = EditorGUILayout.Toggle("显示检测到的解（猴）", _showSolutionOnBoard);
 
             var boardW = _size * (_cellPx + 2f) + 8f;
             var boardH = _size * (_cellPx + 2f) + 8f;
@@ -616,7 +616,7 @@ namespace Wooduku.LevelEditor
 
                     var isSol = solCols != null && solCols[r] == c;
                     var isFixed = IsFixedQueen(r, c);
-                    var text = isFixed ? "锁" : isSol ? "猫" : label;
+                    var text = isFixed ? "锁" : isSol ? "猴" : label;
                     if (!string.IsNullOrEmpty(text))
                     {
                         var style = new GUIStyle(EditorStyles.boldLabel)
@@ -1343,7 +1343,7 @@ namespace Wooduku.LevelEditor
             var addedColorCount = 0;
             if (_size < 4)
             {
-                SetStatus($"边长 N={_size} 无法满足猫咪八邻不接触规则，随机生成需要 N≥4。", MessageType.Error);
+                SetStatus($"边长 N={_size} 无法满足猴子八邻不接触规则，随机生成需要 N≥4。", MessageType.Error);
                 return;
             }
 

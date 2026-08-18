@@ -268,7 +268,7 @@ namespace Wooduku.LevelEditor
 
         private static Color SampleCell(Color32[] pixels, int w, float x0, float y0, float cellW, float cellH)
         {
-            // 内缩，避开圆角边与缝；忽略过黑/过白（猫图标）
+            // 内缩，避开圆角边与缝；忽略过黑/过白（解图标）
             var insetX = cellW * 0.22f;
             var insetY = cellH * 0.22f;
             var xStart = Mathf.FloorToInt(x0 + insetX);
