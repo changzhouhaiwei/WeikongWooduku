@@ -1,0 +1,34 @@
+---
+description: Agent 产生的 Python 文件必须放在 Pytool，可按用途分子目录
+alwaysApply: true
+---
+
+# Python 文件落点
+
+Agent 新建或生成的 `.py` 一律放在仓库根下的 `Pytool/`，不要写到 `Assets/`、工程根目录或其他业务目录。
+
+## 目录
+
+- 根路径：`Pytool/`
+- 可按用途分子目录，例如 `Pytool/export/`、`Pytool/image/`、`Pytool/unity/`
+- 同系列脚本放同一子目录；一次性小工具可直接放 `Pytool/`
+- 脚本产生的输出（图、json、csv 等）优先放在对应脚本旁的 `output/`，或该子目录下另建输出文件夹
+
+## 示例
+
+```
+# ❌ 不要
+Assets/Tools/gen_board.py
+export_ui.py
+scripts/resize.py
+
+# ✅ 要
+Pytool/export_ui.py
+Pytool/image/resize.py
+Pytool/unity/gen_board.py
+```
+
+## 例外
+
+- 用户明确指定了其他路径时，按用户指定
+- 不要把已有第三方 / Unity 包里的 Python 挪进 `Pytool/`
